@@ -1,0 +1,7 @@
+﻿  01-复杂度1 最大子列和问题.cpp
+c:\users\hhx97\desktop\课件\浙江大学数据结构\中国大学mooc-陈越、何钦铭-数据结构-2018春\01-复杂度1 最大子列和问题\01-复杂度1 最大子列和问题.cpp(17): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+c:\users\hhx97\desktop\课件\浙江大学数据结构\中国大学mooc-陈越、何钦铭-数据结构-2018春\01-复杂度1 最大子列和问题\01-复杂度1 最大子列和问题.cpp(22): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+  01-复杂度1 最大子列和问题.vcxproj -> C:\Users\hhx97\Desktop\课件\浙江大学数据结构\中国大学MOOC-陈越、何钦铭-数据结构-2018春\Debug\01-复杂度1 最大子列和问题.exe
+  01-复杂度1 最大子列和问题.vcxproj -> C:\Users\hhx97\Desktop\课件\浙江大学数据结构\中国大学MOOC-陈越、何钦铭-数据结构-2018春\Debug\01-复杂度1 最大子列和问题.pdb (Full PDB)
