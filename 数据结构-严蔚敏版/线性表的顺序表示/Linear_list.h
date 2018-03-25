@@ -63,3 +63,13 @@ ElemType GetElem(Sqlist l, int i, ElemType* e)  // This function make 'e' equals
 	return *e;
 }
 
+Status AddElem(Sqlist *l,ElemType e)
+{
+	if (l->length == l->listsize)
+	{
+		l = realloc(l, sizeof((l->listsize + LIST_INCREMENT_SIZE) * sizeof(ElemType)));
+	}
+	l->elem[++l->length] = e;
+	return OK;
+}
+

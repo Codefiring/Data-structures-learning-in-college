@@ -1,4 +1,2 @@
 ﻿  linear_list_main.c
-d:\奋斗学习\大学三年级\数据结构\course code\data-structures-learning-in-college\数据结构-严蔚敏版\线性表的顺序表示\linear_list_main.c(8): warning C4047: “初始化”:“Sqlist *”与“Sqlist (*)[10]”的间接级别不同
-  线性表的顺序表示.vcxproj -> D:\奋斗学习\大学三年级\数据结构\course code\Data-structures-learning-in-college\数据结构-严蔚敏版\Debug\线性表的顺序表示.exe
-  线性表的顺序表示.vcxproj -> D:\奋斗学习\大学三年级\数据结构\course code\Data-structures-learning-in-college\数据结构-严蔚敏版\Debug\线性表的顺序表示.pdb (Full PDB)
+d:\奋斗学习\大学三年级\数据结构\course code\data-structures-learning-in-college\数据结构-严蔚敏版\线性表的顺序表示\linear_list_main.c(13): error C2059: 语法错误:“]”
