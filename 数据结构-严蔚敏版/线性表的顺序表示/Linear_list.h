@@ -30,4 +30,36 @@ Status InitList(Sqlist* l)
 	return OK;
 }
 
+Status DestroyList(Sqlist* l)
+{
+	free(l);
+	l = NULL;
+	printf("The list has been destroyed !");
+	return OK;
+}
+
+Status ClearList(Sqlist* l)
+{
+	if (!l->length) return OK;
+	InitList(l);
+	return OK;
+}
+
+Status ListEmpty(Sqlist l)
+{
+	if (!l.length)return TRUE;
+	else return FALSE;
+}
+
+int ListLength(Sqlist l)
+{
+	return l.length;
+}
+
+ElemType GetElem(Sqlist l, int i, ElemType* e)  // This function make 'e' equals to 'elem' in list 'l' at position 'i'
+{
+	if (1 > i || i > l.length)return ERROR;
+	*e = l.elem[i];
+	return *e;
+}
 

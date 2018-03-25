@@ -4,8 +4,8 @@
 
 int main()
 {
-	Sqlist a;
-	Sqlist*l = &a;
+	Sqlist a[10];
+	Sqlist*l = a;
 	InitList(l);
 	printf("%d\n", l->listsize);
 	printf("%d\n", l->length);
