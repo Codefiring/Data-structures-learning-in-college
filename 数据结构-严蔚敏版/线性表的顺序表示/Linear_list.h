@@ -47,6 +47,7 @@ Status ClearList(Sqlist* l)
 
 Status ListEmpty(Sqlist l)
 {
+	printf("The list has been empty !");
 	if (!l.length)return TRUE;
 	else return FALSE;
 }
@@ -59,7 +60,7 @@ int ListLength(Sqlist l)
 ElemType GetElem(Sqlist l, int i, ElemType* e)  // This function make 'e' equals to 'elem' in list 'l' at position 'i'
 {
 	if (1 > i || i > l.length)return ERROR;
-	*e = l.elem[i];
+	*e = l.elem[i-1];
 	return *e;
 }
 
@@ -69,7 +70,26 @@ Status AddElem(Sqlist *l,ElemType e)
 	{
 		l = realloc(l, sizeof((l->listsize + LIST_INCREMENT_SIZE) * sizeof(ElemType)));
 	}
-	l->elem[++l->length] = e;
+	l->elem[l->length++] = e;
 	return OK;
+}
+
+int LocateElem(Sqlist l, ElemType e,int index[])
+/*Input: list 'l' and the compare 'e' and the array holds the position where 'l.elem' equals to 'e'*/
+{
+	int num_counter = 1;
+	if (ListEmpty(l))exit(ERROR);
+	for (int i = 0; i < l.length; i++)
+	{
+		if (l.elem[i] == e) {
+			index[num_counter - 1] = i;
+			num_counter++;
+		}
+	}
+	printf("The location of the elem are:");
+	for (int j = 0; j < num_counter; j++)
+	{
+		printf("%d ", l.elem[index[j]]);
+	}
 }
 
