@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include "Linear_list.h"
 
-
 int main()
 {
 	Sqlist a ;
