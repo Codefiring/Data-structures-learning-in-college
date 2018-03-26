@@ -12,6 +12,8 @@ int main()
 	int number;
 	ElemType *e = &number;
 	
+
+
 	printf("%d\n",GetElem(a,1,e));
 	printf("%d\n", l->listsize);
 	printf("%d\n", l->length);
