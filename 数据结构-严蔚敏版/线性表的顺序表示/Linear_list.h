@@ -47,9 +47,12 @@ Status ClearList(Sqlist* l)
 
 Status ListEmpty(Sqlist l)
 {
-	printf("The list has been empty !");
-	if (!l.length)return TRUE;
-	else return FALSE;
+	
+	if (l.length)return FALSE;
+	else { 
+		printf("The list has been empty !");
+		return TRUE;
+	}
 }
 
 int ListLength(Sqlist l)
@@ -66,16 +69,18 @@ ElemType GetElem(Sqlist l, int i, ElemType* e)  // This function make 'e' equals
 
 Status AddElem(Sqlist *l,ElemType e)
 {
-	if (l->length == l->listsize)
-	{
+	if (l->length == l->listsize){
 		l = realloc(l, sizeof((l->listsize + LIST_INCREMENT_SIZE) * sizeof(ElemType)));
 	}
 	l->elem[l->length++] = e;
 	return OK;
 }
 
+/*
+
 int LocateElem(Sqlist l, ElemType e,int index[])
-/*Input: list 'l' and the compare 'e' and the array holds the position where 'l.elem' equals to 'e'*/
+//Input: list 'l' and the compare 'e' and the array holds the position where 'l.elem' equals to 'e'.
+//This is a crazy version.
 {
 	int num_counter = 1;
 	if (ListEmpty(l))exit(ERROR);
@@ -91,5 +96,59 @@ int LocateElem(Sqlist l, ElemType e,int index[])
 	{
 		printf("%d ", l.elem[index[j]]);
 	}
+	return *index;
+}
+*/
+
+int LocateElem(Sqlist l, ElemType e)
+{
+	if (ListEmpty(l))exit(ERROR);
+	for (int i = 0; i < l.length; i++)
+	{
+		if (l.elem[i] == e)return ++i;
+	}
+	return 0;
 }
 
+ElemType PriorElem(Sqlist l, ElemType cur_e, ElemType* pre_e)
+{
+	if (ListEmpty(l))exit(ERROR);
+	int index = LocateElem(l, cur_e);
+	if (index == 1)exit(ERROR);
+	else *pre_e = l.elem[index-1];
+	return *pre_e;
+}
+
+ElemType NextElem(Sqlist l, ElemType cur_e, ElemType* next_e)
+{
+	if (ListEmpty(l))exit(ERROR);
+	int index = LocateElem(l, cur_e);
+	if (index == l.length)exit(ERROR);
+	else *next_e = l.elem[index + 1];
+	return *next_e;
+}
+
+void ListInsert(Sqlist *l, int i, ElemType e)
+{
+	if (ListEmpty(*l) || i<1 || i>l->length)exit(ERROR);
+	if (l->length == l->listsize) {
+		l = realloc(l, sizeof((l->listsize + LIST_INCREMENT_SIZE) * sizeof(ElemType)));
+	}
+	for (int k = l->length; k >= i; k--)
+	{
+		l->elem[k] = l->elem[k - 1];
+	}
+	l->elem[i - 1] = e;
+	l->length++;
+}
+
+void ListDelete(Sqlist *l, int i, ElemType* e)
+{
+	if (ListEmpty(*l) || i<1 || i>l->length)exit(ERROR);
+	*e = l->elem[i - 1];
+	for (int k = i; k <= l->length; k++)
+	{
+		l->elem[k-1] = l->elem[k];
+	}
+	l->length--;
+}
