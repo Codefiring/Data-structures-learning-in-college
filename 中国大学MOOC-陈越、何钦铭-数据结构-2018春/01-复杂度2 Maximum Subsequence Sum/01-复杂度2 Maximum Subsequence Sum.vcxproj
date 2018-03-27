@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="01-复杂度2 Maximum Subsequence Sum.c" />
+    <ClCompile Include="answer.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
