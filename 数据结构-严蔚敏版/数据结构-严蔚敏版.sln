@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "线性表的顺序表示", "线性表的顺序表示\线性表的顺序表示.vcxproj", "{295BCAA6-8047-41F1-9C1B-F57B8195BDDE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "线性表的链式表示", "线性表的链式表示\线性表的链式表示.vcxproj", "{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{295BCAA6-8047-41F1-9C1B-F57B8195BDDE}.Release|x64.Build.0 = Release|x64
 		{295BCAA6-8047-41F1-9C1B-F57B8195BDDE}.Release|x86.ActiveCfg = Release|Win32
 		{295BCAA6-8047-41F1-9C1B-F57B8195BDDE}.Release|x86.Build.0 = Release|Win32
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Debug|x64.ActiveCfg = Debug|x64
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Debug|x64.Build.0 = Debug|x64
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Debug|x86.ActiveCfg = Debug|Win32
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Debug|x86.Build.0 = Debug|Win32
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Release|x64.ActiveCfg = Release|x64
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Release|x64.Build.0 = Release|x64
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Release|x86.ActiveCfg = Release|Win32
+		{C805DC7B-63E3-4D33-A4AD-C6DB19254A8C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
