@@ -6,12 +6,13 @@ using namespace std;
 #include"建立单链表.h"
 #include"输出单链表.h"
 #include"单链表逆置.h"
-void main()
+int main()
 {
 	linklist*head;
 	creat(head);
 	print(head);
 	invert(head);//调用单链表逆置的函数
 	print(head);
+	return 0;
 }
 

@@ -1,5 +1,6 @@
 //分解单链表主程序文件.cpp
-#include<iostream.h>
+#include<iostream>
+using namespace std;
 #include<stdio.h>
 #include"单链表结构类型定义.h"
 #include"建立单链表.h"
