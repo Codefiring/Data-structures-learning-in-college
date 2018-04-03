@@ -1,2 +1,11 @@
-﻿  02-线性结构2 一元多项式的乘法与加法运算.vcxproj -> D:\奋斗学习\大学三年级\数据结构\course code\Data-structures-learning-in-college\中国大学MOOC-陈越、何钦铭-数据结构-2018春\Debug\02-线性结构2 一元多项式的乘法与加法运算.exe
+﻿  polynomial_of_one_indeterminate.c
+d:\奋斗学习\大学三年级\数据结构\course code\data-structures-learning-in-college\中国大学mooc-陈越、何钦铭-数据结构-2018春\02-线性结构2 一元多项式的乘法与加法运算\polynomial_of_one_indeterminate.c(217): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+d:\奋斗学习\大学三年级\数据结构\course code\data-structures-learning-in-college\中国大学mooc-陈越、何钦铭-数据结构-2018春\02-线性结构2 一元多项式的乘法与加法运算\polynomial_of_one_indeterminate.c(222): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+d:\奋斗学习\大学三年级\数据结构\course code\data-structures-learning-in-college\中国大学mooc-陈越、何钦铭-数据结构-2018春\02-线性结构2 一元多项式的乘法与加法运算\polynomial_of_one_indeterminate.c(227): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+d:\奋斗学习\大学三年级\数据结构\course code\data-structures-learning-in-college\中国大学mooc-陈越、何钦铭-数据结构-2018春\02-线性结构2 一元多项式的乘法与加法运算\polynomial_of_one_indeterminate.c(232): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+  02-线性结构2 一元多项式的乘法与加法运算.vcxproj -> D:\奋斗学习\大学三年级\数据结构\course code\Data-structures-learning-in-college\中国大学MOOC-陈越、何钦铭-数据结构-2018春\Debug\02-线性结构2 一元多项式的乘法与加法运算.exe
   02-线性结构2 一元多项式的乘法与加法运算.vcxproj -> D:\奋斗学习\大学三年级\数据结构\course code\Data-structures-learning-in-college\中国大学MOOC-陈越、何钦铭-数据结构-2018春\Debug\02-线性结构2 一元多项式的乘法与加法运算.pdb (Full PDB)

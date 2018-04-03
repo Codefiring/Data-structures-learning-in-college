@@ -8,7 +8,7 @@ using namespace std;
 #include"输出循环链表.h"
 #include"在循环链表中插入.h"
 #include"分解单链表.h"
-void main()
+int main()
 {  linklist *head,*letter,*digit,*other;
    creat(head);
    print1(head);
@@ -22,5 +22,6 @@ void main()
    print2(letter);
    print2(digit);
    print2(other);
+   return 0;
 }
 
