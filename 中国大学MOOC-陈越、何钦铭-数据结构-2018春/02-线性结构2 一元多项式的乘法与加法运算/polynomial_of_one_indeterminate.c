@@ -66,14 +66,14 @@ int PolySort(Polynomial poly)
 		int count = 0, num_count = 0;
 		while (poly->link != NULL)
 		{
+			//flag = 0;
 			num_count++;
-			flag = 1;
 			if (poly->expon == poly->link->expon)
 			{
 				poly->coef = poly->coef + poly->link->coef;
 				poly->link = poly->link->link;
 				poly = poly->link;
-				flag = 0;
+				//flag = 1;
 			}
 			else if (poly->expon < poly->link->expon)
 			{
@@ -85,7 +85,7 @@ int PolySort(Polynomial poly)
 				coef_temp = poly->coef;
 				poly->coef = poly->link->coef;
 				poly->link->coef = coef_temp;
-				flag = 0;
+				//flag = 1;
 
 				poly = poly->link;
 			}
@@ -93,12 +93,9 @@ int PolySort(Polynomial poly)
 			{
 				poly = poly->link;
 				count++;
-				
 			}
 		}
-		if (count == num_count) break;
-		
-
+		if (count == num_count) flag = 0;
 	}
 	poly = r;
 	return 0;
@@ -129,11 +126,19 @@ void PolyAdd(Polynomial p1, Polynomial p2, Polynomial polyAdd)
 			}
 			else if (poly1->expon == poly2->expon) 
 			{
-				polyAdd->link = poly1;
-				polyAdd->link->coef = poly1->coef + poly2->coef;
-				poly1 = poly1->link;
-				polyAdd->link->link = NULL;
-				poly2 = poly2->link;
+				if ((poly1->coef + poly2->coef) != 0)
+				{
+					polyAdd->link = poly1;
+					polyAdd->link->coef = poly1->coef + poly2->coef;
+					poly1 = poly1->link;
+					polyAdd->link->link = NULL;
+					poly2 = poly2->link;
+				}
+				else 
+				{
+					poly1 = poly1->link;
+					poly2 = poly2->link;
+				}
 			}
 			else if (poly1->expon < poly2->expon)
 			{
@@ -141,12 +146,11 @@ void PolyAdd(Polynomial p1, Polynomial p2, Polynomial polyAdd)
 				poly2 = poly2->link;
 				polyAdd->link->link = NULL;
 			}
+			if (poly1 == NULL&&poly2!=NULL) polyAdd->link->link = poly2;
+			else if(poly1 != NULL&&poly2 == NULL) polyAdd->link->link = poly1;
 		}
-		if (poly1 == NULL) polyAdd->link->link = poly2;
-		else polyAdd->link->link = poly1;
+		
 	}
-	else if (poly1 == NULL) polyAdd = poly2;
-	else polyAdd = poly1;
 }
 
 void PolyMulti(Polynomial poly1, Polynomial poly2, Polynomial polyMulti)
@@ -182,8 +186,9 @@ void PolyMulti(Polynomial poly1, Polynomial poly2, Polynomial polyMulti)
 	else InitPoly(polyMulti) ;
 }
 
-void PolyCheck(Polynomial poly)
+int PolyCheck(Polynomial poly)
 {
+	if (poly->link == NULL)return 0;
 	poly = poly->link;
 	while (poly->link != NULL)
 	{
@@ -193,7 +198,7 @@ void PolyCheck(Polynomial poly)
 		}
 		poly = poly->link;
 	}
-
+	return 0;
 }
 
 int main()
@@ -234,7 +239,7 @@ int main()
 		}
 	}
 
-	if (poly1 == NULL || poly2 == NULL) 
+	if (poly1->link == NULL || poly2->link == NULL)
 	{
 		printf("%d %d\n", 0, 0);
 	}
@@ -246,19 +251,18 @@ int main()
 		PolyShow(polyMulti);
 	}
 
-	if (poly1 != NULL&&poly2 != NULL) 
+	if (poly1->link != NULL&&poly2->link != NULL) 
 	{
 		PolyAdd(poly1, poly2, polyAdd);
 		PolyCheck(polyAdd);
-		PolyShow(polyAdd);
+		if(polyAdd->link == NULL)printf("%d %d\n", 0, 0);
+		else PolyShow(polyAdd);
 	}
-	else if (poly1 == NULL&&poly2 == NULL)
+	else if (poly1->link == NULL&&poly2->link == NULL)
 		printf("%d %d\n", 0, 0);
-	else if (poly1 == NULL)
+	else if (poly1->link == NULL)
 		PolyShow(poly2);
-	else if(poly2 == NULL)
+	else if(poly2->link == NULL)
 		PolyShow(poly1);
-
 	return 0;
-
 }
