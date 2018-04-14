@@ -22,25 +22,26 @@ typedef struct {	//linklist type
 	int len;
 }LinkList;
 
-Status MakeNode(Link &p, Elemtype e) {
+Status MakeNode(Link p, Elemtype e) {
 	//make node point to e, return ERROR if failed
-	p = (Link)malloc(sizeof(LNode));
+	p = (Link)malloc(sizeof(Link));
+	printf("%d", sizeof(Link));
 	if(!p)	
 		return(ERROR);
 	p->data = e;
 	return OK;
 }//MakeNode
 
-void FreeNode(Link &p) {
+void FreeNode(Link p) {
 	//free LNode p
-	free p;
+	free(p);
 	p = NULL;
 }
 
-Status InitList(LinkList &l) {
+Status InitList(LinkList l) {
 	//make an empty linklist
 	Link p;
-	p = (Link)malloc(sizeof(LNode));
+	p = (Link)malloc(sizeof(Link));
 	if (!p)
 		return ERROR;
 	p->next = NULL;
@@ -50,7 +51,7 @@ Status InitList(LinkList &l) {
 	return OK;
 }
 
-Status DestroyList(LinkList &l) {
+Status DestroyList(LinkList l) {
 	Link p;
 	while (l.head!=l.tail) {
 		p = l.head->next;
