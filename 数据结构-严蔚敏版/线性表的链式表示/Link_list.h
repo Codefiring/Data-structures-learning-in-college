@@ -1,16 +1,9 @@
-#pragma once
+#ifndef LINK_LIST_H_
+#define LINK_LIST_H_
+
 #include<stdlib.h>
 #include<malloc.h>
-
-#define Elemtype int
-typedef int Status; //define the type of the function return status of the process
-
-#define TRUE 1
-#define FALSE 0
-#define OK 1
-#define ERROR -1
-#define INFEASTIBLE -1
-#define OVERFLOW -2
+#include "Status.h"
 
 typedef struct LNode {	//linknode type
 	Elemtype data;
@@ -22,7 +15,7 @@ typedef struct {	//linklist type
 	int len;
 }LinkList;
 
-Status MakeNode(Link p, Elemtype e) {
+Status MakeNode(Link *p, Elemtype e) {
 	//make node point to e, return ERROR if failed
 	p = (Link)malloc(sizeof(Link));
 	printf("%d", sizeof(Link));
@@ -32,13 +25,13 @@ Status MakeNode(Link p, Elemtype e) {
 	return OK;
 }//MakeNode
 
-void FreeNode(Link p) {
+void FreeNode(Link *p) {
 	//free LNode p
 	free(p);
 	p = NULL;
 }
 
-Status InitList(LinkList l) {
+Status InitList(LinkList *l) {
 	//make an empty linklist
 	Link p;
 	p = (Link)malloc(sizeof(Link));
@@ -63,3 +56,10 @@ Status DestroyList(LinkList l) {
 	l.tail = NULL;
 	return OK;
 }
+
+Status ClearList(LinkList l) {
+
+}
+
+
+#endif

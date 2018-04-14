@@ -18,9 +18,15 @@
     <ClCompile Include="linkedlist.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Scanf.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Link_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Status.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
