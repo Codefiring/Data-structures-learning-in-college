@@ -29,8 +29,8 @@ Status MakeNode(Link p, Elemtype e) {
 
 void FreeNode(Link *p) {
 	//free LNode p
-	free(p);
-	p = NULL;
+	free(*p);
+	*p = NULL;
 }
 
 Status InitList(LinkList *l) {
@@ -100,6 +100,7 @@ Status Append(LinkList *l, Link s) {
 }
 
 Status Remove(LinkList *l, Link q) {
+	//remove the last LNode and return it as q
 	Link tmp;
 	tmp = l->head;
 	while (tmp->next != l->tail)tmp = tmp->next;
@@ -109,5 +110,17 @@ Status Remove(LinkList *l, Link q) {
 	return OK;
 }
 
+Status InsBefore(LinkList *l, Link *p, Link s) {
+	//p point to a LNode in l and add s before q in l
+	if (p == l->head)return ERROR;
+	else if (p == l->head->next) InsFirst(l, s);
+	else {
+		while (l->head->next != p)l->head = l->head->next;
+		l->head->next = s;
+		s->next = p;
+		l->len++;
+	}
+	return OK;
+}
 
 #endif
