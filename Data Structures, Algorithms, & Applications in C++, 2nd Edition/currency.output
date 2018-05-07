@@ -1,0 +1,9 @@
+$3.50 + -$2.25 = $1.25
+-$6.00 incremented by $3.50 is -$2.50
+-$2.50 + -$2.25 + $3.50 = -$1.25
+Increment -$2.50 by -$2.25 and then add $3.50
+Result is -$1.25
+Incremented object is -$4.75
+Attempting to initialize with cents = 152
+Caught thrown exception
+Cents should be < 100
