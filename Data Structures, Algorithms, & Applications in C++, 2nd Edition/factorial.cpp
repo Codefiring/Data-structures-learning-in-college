@@ -12,5 +12,6 @@ int main(){
     int fact = 0;
     fact = factorial(a);
     cout<<fact<<endl;
+ 
     return 0;
 }
