@@ -23,3 +23,20 @@
 
 	>This file change the operator `<<` to a *friend member* so that it can access the *private* variable.
 
+## class `arrayList`
+
+1. linearList.h
+
+	>This file is the virtual class of `linearList`.
+	>It describes the *abstract data type* of a linearList.
+	>It contains some *pure virtual function*s using '0' as the initialized value.
+
+2. changeLength1D.h
+
+	>This file contains a function template called `changeLength1D`.
+	>The function can change the size of the array that put into it. 
+
+3. arrayList.h
+
+	>This file is the the implement of the class `arrayList`
+	>It contains the *integrety codes* of arrayList.
