@@ -44,3 +44,9 @@
 	>This file is the the implement of the class `arrayList`.
 	
 	>It contains the *integrety codes* of arrayList.
+
+## class `chain`
+
+1. chain.h
+
+	>This file is the linked mode of the DS linearList.
